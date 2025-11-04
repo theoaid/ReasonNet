@@ -1,0 +1,58 @@
+[
+  {
+    "domain": "Geography, Computer Science",
+    "user_prompt": "Given the red and near-infrared (NIR) reflectance values of a pixel as floating-point numbers, write Python code to compute the NDVI: (NIR - Red) / (NIR + Red). Return 0 if the denominator is zero, and classify the pixel as ‘vegetation’ if NDVI > 0.3, ‘urban’ if NDVI < 0.2, and ‘transition’ otherwise.",
+    "reasoning_snippet": [
+      "This work requires the NDVI, because NDVI gives a measure of the vegetation cover of a place. A place with high NDVI means vegetation and medium would be urban, and water would be the least NDVI range. I would then say that, NDVI between 1>= NDVI >0.3 is vegetation, 0.3>= NDVI >0.0 is urban else transition. NDVI is calculated by NDVI = (NIR - Red) / (NIR + Red). We need to handle division by zero by setting NDVI to 0 if denominator is zero. I will calculate the numerator and denominator separately and check for the condition; if pass then we compute NDVI else return 0"
+    ],
+    "libraries": ["pandas", "numpy"]
+  },
+  {
+    "domain": "Biomes, Remote Sensing",
+    "user_prompt": "Given the spectral band values for a pixel: [Red = 0.15, Green = 0.35, Blue = 0.20, NIR = 0.60], write Python code to compute NDVI and classify the pixel as ‘vegetation’, ‘water’, or ‘urban’ based on NDVI thresholds.",
+    "reasoning_snippet": [
+      "NDVI is calculated by NDVI = (NIR - Red) / (NIR + Red). We need to handle division by zero by setting NDVI to 0 if denominator is zero. I will calculate the numerator and denominator separately and check for the condition; if pass then we compute NDVI else return 0. Vegetation has a higher NDVI value, whilst urban has a lower NDVI value and water has less than 0 NDVI value."
+    ],
+    "libraries": ["numpy"]
+  },
+  {
+    "domain": "Geography, Remote Sensing",
+    "user_prompt": "Write a Python function that takes the spectral band values of a pixel (at minimum Red and NIR) as input, computes NDVI, and classifies the land cover as ‘vegetation’, ‘water’, or ‘urban’ using defined thresholds.",
+    "reasoning_snippet": [
+      "The funtion should have two paramters, Red and NIR. NDVI is calculated by NDVI = (NIR - Red) / (NIR + Red + 1e-8). If NDVI > 0.3 then vegetation, if NDVI < 0 then water else urban"
+    ],
+    "libraries": ["numpy"]
+  },
+  {
+    "domain": "Biomes, Geography, Remote Sensing",
+    "user_prompt": "Given a Sentinel-2 GeoTIFF file, write  a Python code to compute NDVI for every pixel and classify each pixel as ‘urban’ if NDVI < 0.2, ‘vegetation’ if NDVI > 0.3, and ‘transition’ otherwise.",
+    "reasoning_snippet": [
+      "NDVI is a measure of how healthy or presence of plant. NDVI = (NIR - Red) / (NIR + Red). I will read the seninel-2 image using rasterio, extract the red and NIR bands, compute NDVI for each pixel, and classify based on the thresholds provided. I will handle division by zero by setting NDVI to 0 if denominator is zero. For sentinel-2, Red is band 4 and NIR is band 8. NOte that when reading with nupy the indexing starts from 0, so I will use band 3 and band 7 respectively."
+    ],
+    "libraries": ["numpy", "rasterio"]
+  },
+  {
+    "domain": "Geography, Remote Sensing",
+    "user_prompt": "Write Python code to compute NDVI from a GeoTIFF file with Red and NIR bands, and classify each pixel into ‘vegetation’, ‘urban’, or ‘transition’ using thresholds of 0.3 and 0.2. Save the output as a new classified raster file.",
+    "reasoning_snippet": [
+      "I will first read in the geotiff file with rasterio, then extract the red and nir bands, for sentinel-2 red is band 4 and nir is band 8, however since numpy uses 0 indexing I will use band 3 and band 7 respectively. Then I will compute NDVI = (NIR - Red) / (NIR + Red + 1e-8). I will classify the NDVI values as follows: if NDVI >= 0.3 then vegetation, if NDVI < 0.3 then urban else transition. Finally I will save the classified raster as a new geotiff file also with rasterio where vegetation is 1, urban is 2 and transition is 0."
+    ],
+    "libraries": ["numpy", "rasterio"]
+  },
+  {
+    "domain": "Geography, Remote Sensing",
+    "user_prompt": "Given an Excel sheet with columns for Red and NIR reflectance values, write Python code to compute NDVI for each row and assign a land cover category (‘vegetation’, ‘urban’, or ‘transition’) based on NDVI thresholds.",
+    "reasoning_snippet": [
+      "I will use pandas to read the excel file, then compute NDVI = (NIR - Red) / (NIR + Red + 1e-8) for each row. I will classify the NDVI values as follows: if NDVI >= 0.3 then vegetation, if NDVI < 0.3 then urban else transition. "
+    ],
+    "libraries": ["numpy", "pandas"]
+  },
+  {
+    "domain": "Environmental monitoring, Remote Sensing",
+    "user_prompt": "Given a Sentinel-2 GeoTIFF image containing Red and NIR bands, write Python code to compute NDVI and classify the land cover into ‘vegetation’, ‘urban’, or ‘water’.",
+    "reasoning_snippet": [
+      "I will read the GeoTIFF image using rasterio, extract the Red and NIR bands (for Sentinel-2, Red is band 4 and NIR is band 8, but using 0-based indexing in numpy, they are bands 3 and 7 respectively). I will then compute NDVI using the formula NDVI = (NIR - Red) / (NIR + Red + 1e-8) to avoid division by zero. Finally, I will classify the land cover based on NDVI values: if NDVI > 0.3, classify as 'vegetation'; if NDVI < 0, classify as 'water'; otherwise, classify as 'urban'."
+    ],
+    "libraries": ["numpy"]
+  }
+]
