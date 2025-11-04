@@ -1,0 +1,46 @@
+[
+  {
+    "domain": "",
+    "user_prompt": "Given the red and near-infrared (NIR) reflectance values of a pixel as floating-point numbers, write Python code to compute the NDVI: (NIR - Red) / (NIR + Red). Return 0 if the denominator is zero, and classify the pixel as ‘vegetation’ if NDVI > 0.3, ‘urban’ if NDVI < 0.2, and ‘transition’ otherwise.",
+    "reasoning_snippet": [""],
+    "libraries": [""]
+  },
+  {
+    "domain": "",
+    "user_prompt": "Given the spectral band values for a pixel: [Red = 0.15, Green = 0.35, Blue = 0.20, NIR = 0.60], write Python code to compute NDVI and classify the pixel as ‘vegetation’, ‘water’, or ‘urban’ based on NDVI thresholds.",
+    "reasoning_snippet": [""],
+    "libraries": [""]
+  },
+  {
+    "domain": "",
+    "user_prompt": "Write a Python function that takes the spectral band values of a pixel (at minimum Red and NIR) as input, computes NDVI, and classifies the land cover as ‘vegetation’, ‘water’, or ‘urban’ using defined thresholds.",
+    "reasoning_snippet": [""],
+    "libraries": [""]
+  },
+  {
+    "domain": "",
+    "user_prompt": "Given a Sentinel-2 GeoTIFF file, write  a Python code to compute NDVI for every pixel and classify each pixel as ‘urban’ if NDVI < 0.2, ‘vegetation’ if NDVI > 0.3, and ‘transition’ otherwise.",
+    "reasoning_snippet": [""],
+    "libraries": [""]
+  },
+  {
+    "domain": "",
+    "user_prompt": "Write Python code to compute NDVI from a GeoTIFF file with Red and NIR bands, and classify each pixel into ‘vegetation’, ‘urban’, or ‘transition’ using thresholds of 0.3 and 0.2. Save the output as a new classified raster file.",
+    "reasoning_snippet": [""],
+    "libraries": [""]
+  },
+  {
+    "domain": "",
+    "user_prompt": "Given an Excel sheet with columns for Red and NIR reflectance values, write Python code to compute NDVI for each row and assign a land cover category (‘vegetation’, ‘urban’, or ‘transition’) based on NDVI thresholds.",
+    "reasoning_snippet": [
+      ""
+    ],
+    "libraries": [""]
+  },
+  {
+    "domain": "",
+    "user_prompt": "Given a Sentinel-2 GeoTIFF image containing Red and NIR bands, write Python code to compute NDVI and classify the land cover into ‘vegetation’, ‘urban’, or ‘water’.",
+    "reasoning_snippet": [],
+    "libraries": []
+  }
+]
