@@ -1,3 +1,12 @@
 {
-    "part_1": [["microsoft/wavecoder-ultra-6.7b", "microsoft/wavecoder-ultra-6.7b", "meta-llama/Meta-Llama-3-8B-instruct"]]
+    "part_1": [["microsoft/wavecoder-ultra-6.7b", "microsoft/wavecoder-ultra-6.7b", "microsoft/wavecoder-ultra-6.7b"]],
+    "part_2": [["microsoft/wavecoder-ultra-6.7b", "microsoft/wavecoder-ultra-6.7b", "meta-llama/Meta-Llama-3-8B-instruct"]],
+    "part_3": [["microsoft/wavecoder-ultra-6.7b", "microsoft/wavecoder-ultra-6.7b", "Qwen2.5-Coder-3B"]],
+    "part_4": [["microsoft/wavecoder-ultra-6.7b", "meta-llama/Meta-Llama-3-8B-instruct", "meta-llama/Meta-Llama-3-8B-instruct"]],
+    "part_5": [["microsoft/wavecoder-ultra-6.7b", "meta-llama/Meta-Llama-3-8B-instruct", "Qwen2.5-Coder-3B"]],
+    "part_6": [["microsoft/wavecoder-ultra-6.7b", "Qwen2.5-Coder-3B", "Qwen2.5-Coder-3B"]],
+    "part_7": [["meta-llama/Meta-Llama-3-8B-instruct", "meta-llama/Meta-Llama-3-8B-instruct", "meta-llama/Meta-Llama-3-8B-instruct"]],
+    "part_8": [["meta-llama/Meta-Llama-3-8B-instruct", "meta-llama/Meta-Llama-3-8B-instruct", "Qwen2.5-Coder-3B"]],
+    "part_9": [["meta-llama/Meta-Llama-3-8B-instruct", "Qwen2.5-Coder-3B", "Qwen2.5-Coder-3B"]],
+    "part_10": [["Qwen2.5-Coder-3B", "Qwen2.5-Coder-3B", "Qwen2.5-Coder-3B"]]
 }
